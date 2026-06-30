@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: transparent !important;
+  overflow: hidden;
+  user-select: none;
+  width: 100vw;
+  height: 100vh;
+  /* Makes window draggable by clicking the empty background */
+  -webkit-app-region: drag;
+}
+
+/* Disable dragging on inputs, buttons, visualizers, etc. to retain interactive controls */
+button, 
+input, 
+textarea,
+canvas,
+svg,
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: rgba(5, 12, 24, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  box-shadow: 
+    0 12px 40px 0 rgba(0, 0, 0, 0.7),
+    inset 0 0 15px rgba(0, 240, 255, 0.03);
+}
+
+.glass-panel-active {
+  border-color: rgba(0, 240, 255, 0.35);
+  box-shadow: 
+    0 12px 40px 0 rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 240, 255, 0.15),
+    inset 0 0 25px rgba(0, 240, 255, 0.08);
+}
+
+/* Neon Glow utilities */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(255, 170, 0, 0.35);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(255, 59, 48, 0.35);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(255, 170, 0, 0.7);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 10px rgba(255, 59, 48, 0.7);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.4);
+}

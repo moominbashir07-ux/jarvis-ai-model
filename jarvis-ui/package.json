@@ -1,0 +1,38 @@
+{
+  "name": "jarvis-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && npm run compile-electron",
+    "compile-electron": "tsc -p tsconfig.electron.json",
+    "electron-start": "electron dist-electron/main.js",
+    "electron-dev": "npm run compile-electron && npm run electron-start",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.5.1",
+    "framer-motion": "^12.41.0",
+    "lucide-react": "^1.21.0",
+    "postcss": "^8.5.15",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tailwindcss": "^3.4.17",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^6.0.2",
+    "electron": "^42.5.0",
+    "electron-builder": "^26.15.3",
+    "oxlint": "^1.69.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.0"
+  }
+}
